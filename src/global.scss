@@ -1,0 +1,15 @@
+:root {
+  --onyx: #3e3e3e;
+  --davys-grey: #5b5b5b;
+  --gray-web: #7d7c7a;
+  --ecru: #b6aa7c;
+  --light-goldenrod-yellow: #edf7d2;
+  --pale-spring-bud: #edf7b5;
+  --padding: 1rem;
+  --margin: 1rem;
+}
+
+body {
+  padding: var(--padding);
+  background: var(--ecru);
+}
