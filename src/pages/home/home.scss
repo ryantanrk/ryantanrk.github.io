@@ -1,0 +1,31 @@
+.home-body {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 100%;
+  padding-top: var(--padding);
+  gap: var(--padding-sm);
+
+  div {
+    color: var(--pale-spring-bud);
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+.socials {
+  background: var(--davys-grey);
+  padding: var(--padding);
+}
+
+.medium {
+  background: var(--gray-web);
+  padding: var(--padding);
+}
+
+.panel {
+  &__header {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+}

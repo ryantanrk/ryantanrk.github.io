@@ -5,11 +5,26 @@
   --ecru: #b6aa7c;
   --light-goldenrod-yellow: #edf7d2;
   --pale-spring-bud: #edf7b5;
+
+  /* Padding and margins */
   --padding: 1rem;
+  --padding-sm: 10px;
   --margin: 1rem;
+  --margin-sm: 10px;
 }
 
 body {
   padding: var(--padding);
   background: var(--ecru);
+  font-family: "Montserrat", normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+header {
+  width: 100%;
+  text-align: center;
 }

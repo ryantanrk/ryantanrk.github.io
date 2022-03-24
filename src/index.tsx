@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import "./index.scss";
+import Home from "./pages/home/home";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <header>
+      <div className="title">Ryan Tan Rui Kit</div>
+      <div className="subtitle">Software Engineer</div>
+    </header>
+    <Home />
   </React.StrictMode>,
   document.getElementById("root")
 );
