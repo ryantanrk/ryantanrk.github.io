@@ -1,14 +1,20 @@
-.home-body {
-  display: flex;
-  flex-direction: row;
-  flex: 0 0 100%;
-  padding-top: var(--padding);
-  gap: var(--padding-sm);
+.home {
+  &__body {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 100%;
+    padding-top: var(--padding);
+    gap: var(--padding-sm);
 
-  div {
-    color: var(--pale-spring-bud);
-    width: 100%;
-    border-radius: var(--border-radius);
+    div {
+      color: var(--pale-spring-bud);
+      width: 100%;
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &__preface {
+    padding-top: var(--padding-lg);
   }
 }
 

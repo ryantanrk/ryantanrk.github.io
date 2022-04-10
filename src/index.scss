@@ -7,6 +7,7 @@
   --pale-spring-bud: #edf7b5;
 
   /* Padding and margins */
+  --padding-lg: 2rem;
   --padding: 1rem;
   --padding-sm: 10px;
   --padding-xs: 5px;
@@ -18,7 +19,7 @@
 }
 
 body {
-  padding: 2rem;
+  padding: var(--padding-lg);
   background: var(--ecru);
   color: var(--light-goldenrod-yellow);
   font-family: "Montserrat", normal;

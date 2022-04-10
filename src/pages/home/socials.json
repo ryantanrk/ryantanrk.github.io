@@ -1,5 +1,11 @@
 [
   {
+    "label": "Medium",
+    "link": "https://ryantanrk.medium.com/",
+    "color": "var(--onyx)",
+    "icon": "#medium"
+  },
+  {
     "label": "Twitter",
     "link": "https://twitter.com/survonline",
     "color": "#00acee",
