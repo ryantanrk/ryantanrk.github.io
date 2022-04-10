@@ -1,12 +1,31 @@
 import "./home.scss";
-import Meta from "../../components/Meta/Meta";
 import socials from "./socials.json";
+import { useState, useEffect } from "react";
+
 import Social from "../../components/Social/Social";
+import BlogItem from "../../components/BlogItem/BlogItem";
 
 const Home = () => {
+  //get medium feed
+  const [blogData, setBlogData] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ryantanrk")
+      .then(resp => resp.json())
+      .then((resp) => {
+        setIsLoaded(true);
+        setBlogData(resp.items);
+      },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        })
+  }, []);
+
   return (
     <div className="home">
-      <Meta title="Ryan Tan" description="My first website" />
       <div className="home__body">
         <div className="socials">
           <div className="panel__header">
@@ -14,13 +33,20 @@ const Home = () => {
           </div>
           {
             socials.map(({ label, link, color, icon }) =>
-              <Social label={label} link={link} color={color} icon={icon} />
+              <Social key={label} label={label} link={link} color={color} icon={icon} />
             )
           }
         </div>
         <div className="medium">
           <div className="panel__header">
-            blog (medium.com)
+            <a target="new" href="https://ryantanrk.medium.com/">blog (medium.com)</a>
+          </div>
+          <div className="medium__articles">
+            {
+              blogData.map(({ title, thumbnail, pubDate, link }) =>
+                <BlogItem title={title} href={link} imageUrl={thumbnail} date={pubDate} />
+              )
+            }
           </div>
         </div>
       </div>

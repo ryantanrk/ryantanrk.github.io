@@ -5,6 +5,7 @@
     flex: 0 0 100%;
     padding-top: var(--padding);
     gap: var(--padding-sm);
+    max-height: 440px;
 
     div {
       color: var(--pale-spring-bud);
@@ -26,6 +27,11 @@
 .medium {
   background: var(--gray-web);
   padding: var(--padding);
+  overflow: scroll;
+
+  &__articles {
+    padding-top: var(--padding);
+  }
 }
 
 .panel {

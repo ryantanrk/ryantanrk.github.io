@@ -1,18 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import Home from "./pages/home/home";
 import reportWebVitals from "./reportWebVitals";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Home from "./pages/home/home";
+import Portfolio from "./pages/portfolio/portfolio";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <header>
       <div className="title">Ryan Tan Rui Kit</div>
       <div className="subtitle">Software Engineer</div>
     </header>
     <div className="links">
-      <a href="/">home</a>
-      <a href="/portfolio">portfolio</a>
+      <Link to="/">home</Link>
+      <Link to="/portfolio">portfolio</Link>
     </div>
     <div>
       <svg style={{ display: "none" }}>
@@ -47,8 +55,11 @@ ReactDOM.render(
         </symbol>
       </svg>
     </div>
-    <Home />
-  </React.StrictMode>,
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+    </Routes>
+  </Router>,
   document.getElementById("root")
 );
 
