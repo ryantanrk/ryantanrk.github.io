@@ -44,7 +44,7 @@ const Home = () => {
           <div className="medium__articles">
             {
               blogData.map(({ title, thumbnail, pubDate, link }) =>
-                <BlogItem title={title} href={link} imageUrl={thumbnail} date={pubDate} />
+                <BlogItem key={link} title={title} href={link} imageUrl={thumbnail} date={pubDate} />
               )
             }
           </div>
