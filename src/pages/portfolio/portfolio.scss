@@ -44,6 +44,11 @@
     padding: var(--padding-xs) var(--padding-sm);
     border: 1px solid var(--light-goldenrod-yellow);
     border-collapse: collapse;
+
+    @media (max-width: 576px) {
+      font-size: 3vw;
+      word-break: normal;
+    }
   }
 
   th,
