@@ -7,10 +7,12 @@ interface SocialProps {
   link: string;
   color?: string;
   className?: string;
-  style?: {};
+  style?: React.CSSProperties;
 }
 
-const Social = ({ label, icon, link, color, className, style }: SocialProps) => {
+const Social = ({ label, icon, link, color, className = "", style = {} }: SocialProps) => {
+  style.background = color;
+
   return (
     <div className={`social ${className}`} style={style}>
       <a href={link}>
@@ -20,8 +22,8 @@ const Social = ({ label, icon, link, color, className, style }: SocialProps) => 
 
       <style>
         {`
-          .social {
-            background-color: ${color || "var(--onyx)"};
+          .icon {
+            margin-right: var(--margin-sm);
           }
         `}
       </style>

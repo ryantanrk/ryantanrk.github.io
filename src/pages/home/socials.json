@@ -20,7 +20,7 @@
   {
     "label": "Instagram",
     "link": "https://www.instagram.com/ryantan/",
-    "color": "linear-gradient(#8a3ab9, #e95950, #bc2a8d, #fccc63, #fbad50, #cd486b, #4c68d7)",
+    "color": "linear-gradient(135deg, #fbad50, #8a3ab9, #bc2a8d, #cd486b, #e95950, #4c68d7, #fccc63)",
     "icon": "#instagram"
   },
   {

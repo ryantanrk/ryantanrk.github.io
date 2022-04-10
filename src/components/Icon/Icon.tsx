@@ -1,21 +1,21 @@
 interface IconProps {
   href: string;
-  style?: {};
+  style?: React.CSSProperties;
+  fill?: string;
+  stroke?: string;
 }
 
-const Icon = ({ href, style }: IconProps =
-  {
-    href: "",
-    style: {
-      width: "24px",
-      height: "24px"
-    }
-  }) => {
+const Icon = ({ href = "", style = {}, fill = "#fff", stroke = "#fff" }: IconProps) => {
+  style.width = "24px";
+  style.height = "24px";
+
   return (
-    <svg style={{
-      width: "24px",
-      height: "24px"
-    }}>
+    <svg
+      className="icon"
+      style={style}
+      fill={fill}
+      stroke={stroke}
+    >
       <use href={href} />
     </svg>
   );

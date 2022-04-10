@@ -10,6 +10,10 @@ ReactDOM.render(
       <div className="title">Ryan Tan Rui Kit</div>
       <div className="subtitle">Software Engineer</div>
     </header>
+    <div className="links">
+      <a href="/">home</a>
+      <a href="/portfolio">portfolio</a>
+    </div>
     <div>
       <svg style={{ display: "none" }}>
         <symbol id="twitter" viewBox="0 0 512 512">
