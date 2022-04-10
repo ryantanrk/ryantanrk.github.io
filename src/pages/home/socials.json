@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Twitter",
+    "link": "https://twitter.com/survonline",
+    "color": "#00acee",
+    "icon": "#twitter"
+  },
+  {
+    "label": "GitHub",
+    "link": "https://github.com/ryantanrk",
+    "color": "#0d1117",
+    "icon": "#github"
+  },
+  {
+    "label": "LinkedIn",
+    "link": "https://www.linkedin.com/in/ryantanrk/",
+    "color": "#0e76a8",
+    "icon": "#linkedin-in"
+  },
+  {
+    "label": "Instagram",
+    "link": "https://www.instagram.com/ryantan/",
+    "color": "linear-gradient(#8a3ab9, #e95950, #bc2a8d, #fccc63, #fbad50, #cd486b, #4c68d7)",
+    "icon": "#instagram"
+  },
+  {
+    "label": "YouTube",
+    "link": "https://www.youtube.com/channel/UC-_g3LhdpBNqeE5Ej6vLs6Q/",
+    "color": "#FF0000",
+    "icon": "#youtube"
+  }
+]
