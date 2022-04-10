@@ -1,0 +1,59 @@
+.portfolio {
+  margin-top: var(--margin);
+  padding: var(--padding);
+  background: var(--davys-grey);
+  border-radius: var(--border-radius);
+
+  h1,
+  h2,
+  h3,
+  ul,
+  ol,
+  li,
+  table,
+  th,
+  td,
+  tr {
+    all: revert;
+  }
+
+  h1:hover {
+    a {
+      content: "hi";
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style-position: inside;
+  }
+
+  a {
+    transition: filter 0.5s ease;
+    text-decoration: underline;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  table,
+  th,
+  td {
+    padding: var(--padding-xs) var(--padding-sm);
+    border: 1px solid var(--light-goldenrod-yellow);
+    border-collapse: collapse;
+  }
+
+  th,
+  tr:nth-child(2) {
+    background: var(--onyx);
+  }
+
+  code {
+    background: var(--gray-web);
+    border-radius: 5px;
+    padding: 3px;
+  }
+}

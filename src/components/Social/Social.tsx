@@ -15,7 +15,7 @@ const Social = ({ label, icon, link, color, className = "", style = {} }: Social
 
   return (
     <div className={`social ${className}`} style={style}>
-      <a href={link}>
+      <a target="new" href={link}>
         <Icon href={icon || ""} />
         <span className="social__label">{label}</span>
       </a>

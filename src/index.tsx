@@ -59,7 +59,7 @@ ReactDOM.render(
       <Route path="/" element={<Home />} />
       <Route path="/portfolio" element={<Portfolio />} />
     </Routes>
-  </Router>,
+  </Router >,
   document.getElementById("root")
 );
 
