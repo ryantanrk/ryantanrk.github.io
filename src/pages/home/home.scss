@@ -35,7 +35,8 @@
   overflow: scroll;
 
   &__articles {
-    padding-top: var(--padding);
+    max-height: unset !important;
+    margin: var(--margin) 0;
   }
 }
 
