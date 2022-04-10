@@ -5,12 +5,17 @@
     flex: 0 0 100%;
     padding-top: var(--padding);
     gap: var(--padding-sm);
-    max-height: 440px;
+
 
     div {
       color: var(--pale-spring-bud);
       width: 100%;
       border-radius: var(--border-radius);
+      max-height: 420px;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
     }
   }
 
