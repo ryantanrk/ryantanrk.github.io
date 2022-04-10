@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import {
@@ -12,7 +12,10 @@ import {
 import Home from "./pages/home/home";
 import Portfolio from "./pages/portfolio/portfolio";
 
-ReactDOM.render(
+const container = document.getElementById("root") as HTMLElement;
+const root = createRoot(container);
+
+root.render(
   <Router>
     <header>
       <div className="title">Ryan Tan Rui Kit</div>
@@ -59,8 +62,7 @@ ReactDOM.render(
       <Route path="/" element={<Home />} />
       <Route path="/portfolio" element={<Portfolio />} />
     </Routes>
-  </Router >,
-  document.getElementById("root")
+  </Router >
 );
 
 // If you want to start measuring performance in your app, pass a function
