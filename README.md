@@ -1,7 +1,5 @@
 # ryantanrk.github.io
 
-hey
+> My personal website
 
-this is my website
-
-thanks for reading
+you can view it **[HERE](https://ryantanrk.github.io/)**
