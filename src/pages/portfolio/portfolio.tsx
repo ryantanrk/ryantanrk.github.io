@@ -1,4 +1,5 @@
 import "./portfolio.scss";
+import Helmet from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
@@ -37,6 +38,10 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
+      <Helmet>
+        <title>ryan tan - portfolio</title>
+        <meta name="description" content="ryan tan's portfolio" />
+      </Helmet>
       <ReactMarkdown children={markdown}
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug]}

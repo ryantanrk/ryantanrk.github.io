@@ -1,4 +1,5 @@
 import "./home.scss";
+import Helmet from "react-helmet";
 import socials from "./socials.json";
 import { useState, useEffect } from "react";
 
@@ -24,10 +25,28 @@ const Home = () => {
         })
   }, []);
 
+  let blogDisplay: JSX.Element[] = [<div>loading...</div>];
+
+  if (isLoaded) {
+    if (error) {
+      blogDisplay = [<div>error: {error}</div>];
+    }
+    else {
+      blogDisplay = [];
+      blogData.map(({ title, thumbnail, pubDate, link }) =>
+        blogDisplay.push(<BlogItem key={link} title={title} href={link} imageUrl={thumbnail} date={pubDate} />)
+      )
+    }
+  }
+
   return (
     <div className="home">
+      <Helmet>
+        <title>ryan tan</title>
+        <meta name="description" content="ryan tan's personal website" />
+      </Helmet>
       <div className="home__body">
-        <div className="socials">
+        <div className="panel socials">
           <div className="panel__header">
             socials
           </div>
@@ -37,16 +56,12 @@ const Home = () => {
             )
           }
         </div>
-        <div className="medium">
+        <div className="panel medium">
           <div className="panel__header">
             <a target="new" href="https://ryantanrk.medium.com/">blog (medium.com)</a>
           </div>
           <div className="medium__articles">
-            {
-              blogData.map(({ title, thumbnail, pubDate, link }) =>
-                <BlogItem key={link} title={title} href={link} imageUrl={thumbnail} date={pubDate} />
-              )
-            }
+            {blogDisplay}
           </div>
         </div>
       </div>
