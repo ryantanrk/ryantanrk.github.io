@@ -56,12 +56,14 @@ const Home = () => {
             )
           }
         </div>
-        <div className="panel medium">
+        <div className="panel medium-wrapper">
           <div className="panel__header">
             <a target="new" href="https://ryantanrk.medium.com/">blog (medium.com)</a>
           </div>
-          <div className="medium__articles">
-            {blogDisplay}
+          <div className="medium">
+            <div className="medium__articles">
+              {blogDisplay}
+            </div>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+@use "scss/mixins" as mix;
+
 :root {
   --onyx: #3e3e3e;
   --davys-grey: #5b5b5b;
@@ -19,6 +21,7 @@
 }
 
 body {
+  @include mix.scrollbar;
   padding: var(--padding-lg);
   background: var(--ecru);
   color: var(--light-goldenrod-yellow);

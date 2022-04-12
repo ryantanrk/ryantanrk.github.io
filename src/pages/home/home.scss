@@ -1,3 +1,5 @@
+@use "../../scss/mixins" as mix;
+
 .home {
   &__body {
     display: flex;
@@ -7,7 +9,7 @@
     gap: var(--padding-sm);
 
 
-    div {
+    & > div {
       color: var(--pale-spring-bud);
       width: 100%;
       border-radius: var(--border-radius);
@@ -28,7 +30,6 @@
   position: relative;
 
   &__header {
-    position: sticky;
     top: 0;
     z-index: 1;
     width: 100%;
@@ -50,20 +51,33 @@
   padding: var(--padding);
 }
 
-.medium {
+.medium-wrapper {
+  position: relative;
   background: var(--gray-web);
-  overflow: scroll;
-
-  &__articles {
-    max-height: unset !important;
-    padding: var(--padding-sm) var(--padding);
-  }
+  display: flex;
+  flex-direction: column;
 
   .panel__header {
     background: var(--gray-web);
     padding: var(--padding);
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.8);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.8);
+  }
+}
+
+.medium {
+  @include mix.scrollbar;
+
+  &::-webkit-scrollbar-track {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+  }
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &__articles {
+    max-height: unset !important;
+    padding: var(--padding-sm) var(--padding);
+    overflow: hidden;
   }
 }
