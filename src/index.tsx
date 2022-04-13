@@ -19,7 +19,7 @@ root.render(
   <Router>
     <header>
       <div className="title">Ryan Tan Rui Kit</div>
-      <div className="subtitle">Software Engineer</div>
+      <div className="subtitle">software engineer</div>
     </header>
     <div className="links">
       <Link to="/">home</Link>
