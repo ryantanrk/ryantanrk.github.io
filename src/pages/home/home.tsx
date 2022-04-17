@@ -14,22 +14,28 @@ const Home = () => {
 
   useEffect(() => {
     fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ryantanrk")
-      .then(resp => resp.json())
+      .then(resp => {
+        if (resp.ok) {
+          return resp.json();
+        }
+
+        throw new Error(resp.statusText);
+      })
       .then((resp) => {
         setIsLoaded(true);
         setBlogData(resp.items);
       },
         (error) => {
           setIsLoaded(true);
-          setError(error);
+          setError(error.message);
         })
   }, []);
 
   let blogDisplay: JSX.Element[] = [<div>loading...</div>];
 
   if (isLoaded) {
-    if (error) {
-      blogDisplay = [<div>error: {error}</div>];
+    if (error != null) {
+      blogDisplay = [<div>Error loading posts.</div>];
     }
     else {
       blogDisplay = [];
