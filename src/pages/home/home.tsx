@@ -1,68 +1,10 @@
 import "./home.scss";
 import Helmet from "react-helmet";
 import socials from "./socials.json";
-import { useState, useEffect } from "react";
 
 import Social from "../../components/Social/Social";
-import BlogItem from "../../components/BlogItem/BlogItem";
 
 const Home = () => {
-  //get medium feed
-  // const [blogData, setBlogData] = useState([]);
-  // const [isLoaded, setIsLoaded] = useState(false);
-  // const [error, setError] = useState(null);
-
-  // const url = "https://medium.com/feed/@ryantanrk";
-
-  // useEffect(() => {
-  //   fetch(url, {
-  //     method: "GET",
-  //     mode: "cors",
-  //     headers: {
-  //       "Access-Control-Allow-Origin": "*",
-  //     },
-  //   })
-  //     .then((resp) => {
-  //       if (resp.ok) {
-  //         return resp.text();
-  //       }
-
-  //       throw new Error(resp.statusText);
-  //     })
-  //     .then(
-  //       (resp) => {
-  //         setIsLoaded(true);
-  //         console.log(resp);
-  //         // setBlogData(resp.items);
-  //       },
-  //       (error) => {
-  //         setIsLoaded(true);
-  //         setError(error.message);
-  //       }
-  //     );
-  // }, []);
-
-  // let blogDisplay: JSX.Element[] = [<div>loading...</div>];
-
-  // if (isLoaded) {
-  //   if (error != null) {
-  //     blogDisplay = [<div>Error loading posts.</div>];
-  //   } else {
-  //     blogDisplay = [];
-  //     blogData.map(({ title, thumbnail, pubDate, link }) =>
-  //       blogDisplay.push(
-  //         <BlogItem
-  //           key={link}
-  //           title={title}
-  //           href={link}
-  //           imageUrl={thumbnail}
-  //           date={pubDate}
-  //         />
-  //       )
-  //     );
-  //   }
-  // }
-
   return (
     <div className="home">
       <Helmet>
@@ -82,16 +24,6 @@ const Home = () => {
             />
           ))}
         </div>
-        {/* <div className="panel medium-wrapper">
-          <div className="panel__header">
-            <a target="new" href="https://ryantanrk.medium.com/">
-              blog (medium)
-            </a>
-          </div>
-          <div className="medium">
-            <div className="medium__articles">{blogDisplay}</div>
-          </div>
-        </div> */}
       </div>
       <div className="home__preface">
         <img
