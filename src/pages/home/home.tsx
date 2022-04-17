@@ -8,42 +8,60 @@ import BlogItem from "../../components/BlogItem/BlogItem";
 
 const Home = () => {
   //get medium feed
-  const [blogData, setBlogData] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState(null);
+  // const [blogData, setBlogData] = useState([]);
+  // const [isLoaded, setIsLoaded] = useState(false);
+  // const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ryantanrk")
-      .then(resp => {
-        if (resp.ok) {
-          return resp.json();
-        }
+  // const url = "https://medium.com/feed/@ryantanrk";
 
-        throw new Error(resp.statusText);
-      })
-      .then((resp) => {
-        setIsLoaded(true);
-        setBlogData(resp.items);
-      },
-        (error) => {
-          setIsLoaded(true);
-          setError(error.message);
-        })
-  }, []);
+  // useEffect(() => {
+  //   fetch(url, {
+  //     method: "GET",
+  //     mode: "cors",
+  //     headers: {
+  //       "Access-Control-Allow-Origin": "*",
+  //     },
+  //   })
+  //     .then((resp) => {
+  //       if (resp.ok) {
+  //         return resp.text();
+  //       }
 
-  let blogDisplay: JSX.Element[] = [<div>loading...</div>];
+  //       throw new Error(resp.statusText);
+  //     })
+  //     .then(
+  //       (resp) => {
+  //         setIsLoaded(true);
+  //         console.log(resp);
+  //         // setBlogData(resp.items);
+  //       },
+  //       (error) => {
+  //         setIsLoaded(true);
+  //         setError(error.message);
+  //       }
+  //     );
+  // }, []);
 
-  if (isLoaded) {
-    if (error != null) {
-      blogDisplay = [<div>Error loading posts.</div>];
-    }
-    else {
-      blogDisplay = [];
-      blogData.map(({ title, thumbnail, pubDate, link }) =>
-        blogDisplay.push(<BlogItem key={link} title={title} href={link} imageUrl={thumbnail} date={pubDate} />)
-      )
-    }
-  }
+  // let blogDisplay: JSX.Element[] = [<div>loading...</div>];
+
+  // if (isLoaded) {
+  //   if (error != null) {
+  //     blogDisplay = [<div>Error loading posts.</div>];
+  //   } else {
+  //     blogDisplay = [];
+  //     blogData.map(({ title, thumbnail, pubDate, link }) =>
+  //       blogDisplay.push(
+  //         <BlogItem
+  //           key={link}
+  //           title={title}
+  //           href={link}
+  //           imageUrl={thumbnail}
+  //           date={pubDate}
+  //         />
+  //       )
+  //     );
+  //   }
+  // }
 
   return (
     <div className="home">
@@ -53,28 +71,32 @@ const Home = () => {
       </Helmet>
       <div className="home__body">
         <div className="panel socials">
-          <div className="panel__header">
-            socials
-          </div>
-          {
-            socials.map(({ label, link, color, icon }) =>
-              <Social key={label} label={label} link={link} color={color} icon={icon} />
-            )
-          }
+          <div className="panel__header">socials</div>
+          {socials.map(({ label, link, color, icon }) => (
+            <Social
+              key={label}
+              label={label}
+              link={link}
+              color={color}
+              icon={icon}
+            />
+          ))}
         </div>
-        <div className="panel medium-wrapper">
+        {/* <div className="panel medium-wrapper">
           <div className="panel__header">
-            <a target="new" href="https://ryantanrk.medium.com/">blog (medium.com)</a>
+            <a target="new" href="https://ryantanrk.medium.com/">
+              blog (medium)
+            </a>
           </div>
           <div className="medium">
-            <div className="medium__articles">
-              {blogDisplay}
-            </div>
+            <div className="medium__articles">{blogDisplay}</div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="home__preface">
-        <img src="/asset/handwriting.svg" alt={`
+        <img
+          src="/asset/handwriting.svg"
+          alt={`
           hi!
 
           thank you for visiting my website.
@@ -95,10 +117,11 @@ const Home = () => {
           
           best wishes friends,
           ryan
-        `} />
+        `}
+        />
       </div>
     </div>
   );
-}
+};
 
 export default Home;
