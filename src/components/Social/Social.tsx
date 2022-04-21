@@ -10,12 +10,19 @@ interface SocialProps {
   style?: React.CSSProperties;
 }
 
-const Social = ({ label, icon, link, color, className = "", style = {} }: SocialProps) => {
+const Social = ({
+  label,
+  icon,
+  link,
+  color,
+  className = "",
+  style = {},
+}: SocialProps) => {
   style.background = color;
 
   return (
     <div className={`social ${className}`} style={style}>
-      <a target="new" href={link}>
+      <a target="_blank" rel="noreferrer noopener" href={link}>
         <Icon href={icon || ""} />
         <span className="social__label">{label}</span>
       </a>
