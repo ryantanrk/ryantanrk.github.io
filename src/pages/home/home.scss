@@ -11,7 +11,6 @@
 
     & > div {
       color: var(--pale-spring-bud);
-      width: 100%;
       border-radius: var(--border-radius);
       max-height: 420px;
     }
@@ -28,7 +27,7 @@
 
 .panel {
   position: relative;
-  width: 50% !important;
+  width: 50%;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -44,7 +43,7 @@
     a {
       transition: filter 0.5s ease;
       
-      &:hover {
+      &:active {
         filter: brightness(0.8);
       }
     }
