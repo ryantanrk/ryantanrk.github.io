@@ -6618,9 +6618,9 @@ react-is@^18.0.0:
   version "18.0.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.0.0.tgz"
 
-react-markdown@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.npmjs.org/react-markdown/-/react-markdown-8.0.2.tgz"
+react-markdown@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-8.0.3.tgz#e8aba0d2f5a1b2124d476ee1fff9448a2f57e4b3"
   dependencies:
     "@types/hast" "^2.0.0"
     "@types/prop-types" "^15.0.0"
@@ -6985,9 +6985,9 @@ sass-loader@^12.3.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sass@^1.49.9:
-  version "1.50.0"
-  resolved "https://registry.npmjs.org/sass/-/sass-1.50.0.tgz"
+sass@^1.50.1:
+  version "1.50.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.50.1.tgz#e9b078a1748863013c4712d2466ce8ca4e4ed292"
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
