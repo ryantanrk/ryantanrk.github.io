@@ -12,7 +12,13 @@
     border-radius: var(--border-radius);
     transition: backdrop-filter 0.5s ease;
 
-    &:hover {
+    @media (hover) {
+      &:hover {
+        backdrop-filter: brightness(0.8);
+      }
+    }
+
+    &:active {
       backdrop-filter: brightness(0.8);
     }
   }

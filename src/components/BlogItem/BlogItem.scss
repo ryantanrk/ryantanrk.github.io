@@ -31,9 +31,11 @@
     gap: 1rem;
   }
 
-  &:hover {
-    .blog-item__image {
-      transform: scale(1.02);
+  @media (hover) {
+    &:hover {
+      .blog-item__image {
+        transform: scale(1.02);
+      }
     }
   }
 }
