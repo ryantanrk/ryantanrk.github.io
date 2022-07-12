@@ -26,7 +26,7 @@
   },
   "scripts": {
     "predeploy": "npm run build --if-present",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -m ':rocket: deploy app'",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "build:css": "sass src/index.scss src/index.css",
