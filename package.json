@@ -17,7 +17,6 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.4.0",
-    "react-scripts": "5.0.1",
     "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "sass": "^1.54.9",
@@ -53,6 +52,7 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "react-scripts": "^5.0.1"
   }
 }

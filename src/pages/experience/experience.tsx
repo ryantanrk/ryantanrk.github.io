@@ -1,12 +1,12 @@
-import "./portfolio.scss";
+import "./experience.scss";
 import Helmet from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 
-const Portfolio = () => {
+const Experience = () => {
   const markdown = `
-  # Portfolio
+  # My Experience
   - Studied at **[INTI International College Subang](https://newinti.edu.my/)**
   - Took Foundation in **Business & IT** in **2018** (1 year)
   - Took a Bachelor's Degree in **Computer Science** from **2019 to 2021** (3 years)
@@ -37,12 +37,13 @@ const Portfolio = () => {
   `;
 
   return (
-    <div className="portfolio">
+    <div className="experience">
       <Helmet>
-        <title>ryan tan - portfolio</title>
-        <meta name="description" content="ryan tan's portfolio" />
+        <title>ryan tan - experience</title>
+        <meta name="description" content="ryan tan - experience" />
       </Helmet>
-      <ReactMarkdown children={markdown}
+      <ReactMarkdown
+        children={markdown}
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug]}
       />
@@ -50,4 +51,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Experience;

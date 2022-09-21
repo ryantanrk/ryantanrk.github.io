@@ -2,15 +2,10 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./pages/home/home";
-import Portfolio from "./pages/portfolio/portfolio";
+import Experience from "./pages/experience/experience";
 
 const container = document.getElementById("root") as HTMLElement;
 const root = createRoot(container);
@@ -23,7 +18,7 @@ root.render(
     </header>
     <div className="links">
       <Link to="/">home</Link>
-      <Link to="/portfolio">portfolio</Link>
+      <Link to="/experience">experience</Link>
     </div>
     <div>
       <svg style={{ display: "none" }}>
@@ -60,7 +55,7 @@ root.render(
     </div>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/experience" element={<Experience />} />
     </Routes>
   </Router>
 );
@@ -68,4 +63,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);
