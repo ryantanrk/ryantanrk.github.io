@@ -29,9 +29,6 @@ jobs:
     - run: npm ci
     - run: npm run build
   deploy:
-    environment:
-        name: github-pages
-        url: ryantanrk.github.io
     runs-on: ubuntu-latest
     needs: build
 
@@ -42,4 +39,4 @@ jobs:
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+          GITHUB_REPOSITORY: ryantanrk.github.io
