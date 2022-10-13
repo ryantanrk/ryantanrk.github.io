@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 import Social from "../../components/Social/Social";
 import BlogItem from "../../components/BlogItem/BlogItem";
+import BlogItemSkeleton from "../../components/BlogItem/BlogItemSkeleton";
 
 const Home = () => {
   //get medium feed
@@ -36,7 +37,11 @@ const Home = () => {
       );
   }, []);
 
-  let blogDisplay: JSX.Element[] = [<div key="loading">loading...</div>];
+  let blogDisplay: JSX.Element[] = [
+    <BlogItemSkeleton />,
+    <BlogItemSkeleton />,
+    <BlogItemSkeleton />,
+  ];
 
   if (isLoaded) {
     if (error != null) {

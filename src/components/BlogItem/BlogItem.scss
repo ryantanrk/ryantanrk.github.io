@@ -29,6 +29,12 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+
+    &-skeleton {
+      margin-top: var(--margin-xs);
+      height: 16px;
+      background-color: var(--davys-grey);
+    }
   }
 
   @media (hover) {
