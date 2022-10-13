@@ -37,11 +37,8 @@ const Home = () => {
       );
   }, []);
 
-  let blogDisplay: JSX.Element[] = [
-    <BlogItemSkeleton />,
-    <BlogItemSkeleton />,
-    <BlogItemSkeleton />,
-  ];
+  // blog display will display skeleton of element before load
+  let blogDisplay: JSX.Element[] = Array(3).fill(<BlogItemSkeleton />);
 
   if (isLoaded) {
     if (error != null) {
