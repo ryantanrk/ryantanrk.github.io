@@ -8,6 +8,8 @@
 }
 
 .blog-item {
+  --skeleton-anim: skeleton 0.5s linear infinite alternate;
+
   &:not(:last-child) {
     padding-bottom: var(--padding);
   }
@@ -35,7 +37,7 @@
 
     &-skeleton {
       background: var(--davys-grey);
-      animation: skeleton 1s linear infinite alternate;
+      animation: var(--skeleton-anim);
     }
   }
 
@@ -48,7 +50,7 @@
       margin-top: var(--margin-xs);
       height: 16px;
       background: var(--davys-grey);
-      animation: skeleton 1s linear infinite alternate;
+      animation: var(--skeleton-anim);
     }
   }
 
