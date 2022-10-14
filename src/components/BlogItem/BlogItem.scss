@@ -1,3 +1,12 @@
+@keyframes skeleton {
+  0% {
+    background-color: var(--davys-grey);
+  }
+  100% {
+    background-color: var(--davys-grey-lighter);
+  }
+}
+
 .blog-item {
   &:not(:last-child) {
     padding-bottom: var(--padding);
@@ -23,6 +32,11 @@
     border-radius: 12px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s ease;
+
+    &-skeleton {
+      background: var(--davys-grey);
+      animation: skeleton 1s linear infinite alternate;
+    }
   }
 
   &__row {
@@ -33,7 +47,8 @@
     &-skeleton {
       margin-top: var(--margin-xs);
       height: 16px;
-      background-color: var(--davys-grey);
+      background: var(--davys-grey);
+      animation: skeleton 1s linear infinite alternate;
     }
   }
 
