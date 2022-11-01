@@ -1,15 +1,21 @@
 [
   {
-    "label": "Medium",
-    "link": "https://ryantanrk.medium.com/",
-    "color": "var(--onyx)",
-    "icon": "#medium"
-  },
-  {
     "label": "Twitter",
     "link": "https://twitter.com/survonline",
     "color": "#00acee",
     "icon": "#twitter"
+  },
+  {
+    "label": "LinkedIn",
+    "link": "https://www.linkedin.com/in/ryantanrk/",
+    "color": "#0e76a8",
+    "icon": "#linkedin-in"
+  },
+  {
+    "label": "Medium",
+    "link": "https://ryantanrk.medium.com/",
+    "color": "var(--onyx)",
+    "icon": "#medium"
   },
   {
     "label": "GitHub",
@@ -18,10 +24,10 @@
     "icon": "#github"
   },
   {
-    "label": "LinkedIn",
-    "link": "https://www.linkedin.com/in/ryantanrk/",
-    "color": "#0e76a8",
-    "icon": "#linkedin-in"
+    "label": "Twitch",
+    "link": "https://twitch.tv/SurvivalistXYZ",
+    "color": "#6441a5",
+    "icon": "#twitch"
   },
   {
     "label": "Instagram",
