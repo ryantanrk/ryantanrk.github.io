@@ -1,4 +1,3 @@
-import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
@@ -14,13 +13,14 @@ root.render(
   <Router>
     <header>
       <div className="title">Ryan Tan Rui Kit</div>
-      <div className="subtitle">software engineer</div>
+      <div className="subtitle">software developer</div>
     </header>
     <div className="links">
       <Link to="/">home</Link>
       <Link to="/experience">experience</Link>
     </div>
     <div>
+      {/* Icons */}
       <svg style={{ display: "none" }}>
         <symbol id="medium" viewBox="0 0 640 512">
           {/* Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
