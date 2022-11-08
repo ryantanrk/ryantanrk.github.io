@@ -24,13 +24,12 @@
     "web-vitals": "^3.0.4"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build --if-present",
     "deploy": "gh-pages -d build -m ':rocket: deploy app'",
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "build:css": "sass src/index.scss src/index.css",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build:css": "sass src/index.scss src/index.css"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +52,8 @@
   "devDependencies": {
     "gh-pages": "^4.0.0",
     "prettier": "2.7.1",
-    "react-scripts": "^5.0.1"
+    "@vitejs/plugin-react": "2.2.0",
+    "vite-plugin-svgr": "2.2.2",
+    "vite": "3.2.3"
   }
 }
