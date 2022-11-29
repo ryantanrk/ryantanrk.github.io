@@ -8,9 +8,9 @@ const Experience = () => {
   const markdown = `
   # My Experience
   - Studied at **[INTI International College Subang](https://newinti.edu.my/)**
-  - Took Foundation in **Business & IT** in **2018** (1 year)
-  - Took a Bachelor's Degree in **Computer Science** from **2019 to 2021** (3 years)
-  - My majors are **Software Engineering, Multimedia & Game Development**
+    - Took Foundation in **Business & IT** in **2018** (1 year)
+    - Took a Bachelor's Degree in **Computer Science** from **2019 to 2021** (3 years)
+    - My majors are **Software Engineering, Multimedia & Game Development**
   - *Final Year Project* - **E-Learning Management System** with **[DoerHRM](https://www.doerhrm.com/)**
 
   Responsibility | Description
@@ -19,12 +19,12 @@ const Experience = () => {
   Back-end Development | Developing various **classes** and **functions** to interact with the database using PHP
   Testing | Testing new features **manually** as they get developed
 
-  - Currently working with **[WeTix](https://github.com/wetix)** since **Jan 2022**
+  - Worked for **[WeTix](https://github.com/wetix)** as a **Junior Software Engineer** from **Jan 2022** - **Nov 2022**
   - WeTix Website (https://wetix.my)
 
   Responsibility | Description
   ------------ | -------------
-  Front-end Development | Helping develop the front end of the website using [\`svelte-kit\`](https://kit.svelte.dev/) and focus on any design flaws or errors, with **responsiveness** and **simplicity** taken into account
+  Front-end Development | Helping develop the front end of the website using [\`svelte-kit\`](https://kit.svelte.dev/) and focus on any design/functional flaws or errors, with **responsiveness** and **simplicity** taken into account
   Reactive Development | Using [\`rxjs\`](https://rxjs.dev/) to handle dataflow in the website
   Unit testing | Writing **automatic tests** for existing code/Svelte components using [\`jest\`](https://jestjs.io/) and [\`@testing-library\`](https://testing-library.com/)
 
@@ -34,6 +34,13 @@ const Experience = () => {
   ------------ | -------------
   Front-end Development | Helping develop the front-end modules of the website using [\`svelte\`](https://svelte.dev/)
   Reactive Development | Using [\`rxjs\`](https://rxjs.dev/) to handle dataflow in the website
+
+  - WeTix API (Back-end)
+
+  Responsibility | Description
+  ------------ | -------------
+  Developing endpoints | Creating new endpoints in the REST API and GraphQL API for use in WeTix products
+  Database design | Alter the database design based on new features that are being introduced into the products
   `;
 
   return (
