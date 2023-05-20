@@ -19,7 +19,7 @@
     "react-router-dom": "^6.11.2",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.56.1",
+    "sass": "^1.62.1",
     "typescript": "^5.0.4",
     "web-vitals": "^3.1.0"
   },
