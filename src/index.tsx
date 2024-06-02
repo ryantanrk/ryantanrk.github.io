@@ -12,7 +12,7 @@ const root = createRoot(container);
 root.render(
   <Router>
     <header>
-      <div className="title">Ryan Tan Rui Kit</div>
+      <div className="title">Ryan Tan</div>
       <div className="subtitle">software developer</div>
     </header>
     <div className="links">

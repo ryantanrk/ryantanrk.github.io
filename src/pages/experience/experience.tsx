@@ -23,7 +23,8 @@ const Experience = () => {
   ### WeTix
 
   - Worked for **[WeTix](https://github.com/wetix)** as a **Junior Software Engineer** from **Jan 2022** - **Nov 2022**
-  - WeTix Website (https://wetix.my)
+
+  #### WeTix Website (https://wetix.my)
 
   | Responsibility        | Description                                                                                                                                                                                                  |
   | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

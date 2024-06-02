@@ -1,68 +1,10 @@
 import "./home.scss";
 import Helmet from "react-helmet";
 import socials from "./socials.json";
-import { useState, useEffect } from "react";
 
 import Social from "../../components/Social/Social";
-import BlogItem from "../../components/BlogItem/BlogItem";
-import BlogItemSkeleton from "../../components/BlogItem/BlogItemSkeleton";
 
 const Home = () => {
-  //get medium feed
-  const [blogData, setBlogData] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState(null);
-
-  const url =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ryantanrk";
-
-  useEffect(() => {
-    fetch(url)
-      .then((resp) => {
-        if (resp.ok) {
-          return resp.json();
-        }
-
-        throw new Error(resp.statusText);
-      })
-      .then(
-        (resp) => {
-          setIsLoaded(true);
-          setBlogData(resp.items);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error.message);
-        }
-      );
-  }, []);
-
-  // blog display will display skeleton of element before load
-  let blogDisplay: JSX.Element[] = [
-    <BlogItemSkeleton key="skeleton-1" />,
-    <BlogItemSkeleton key="skeleton-2" />,
-    <BlogItemSkeleton key="skeleton-3" />
-  ];
-
-  if (isLoaded) {
-    if (error != null) {
-      blogDisplay = [<div key="error">Error loading posts.</div>];
-    } else {
-      blogDisplay = [];
-      blogData.map(({ title, thumbnail, pubDate, link }) =>
-        blogDisplay.push(
-          <BlogItem
-            key={link}
-            title={title}
-            href={link}
-            imageUrl={thumbnail}
-            date={pubDate}
-          />
-        )
-      );
-    }
-  }
-
   return (
     <div className="home">
       <Helmet>
@@ -81,12 +23,6 @@ const Home = () => {
               icon={icon}
             />
           ))}
-        </div>
-        <div className="panel medium-wrapper">
-          <div className="panel__header">blog (medium)</div>
-          <div className="medium">
-            <div className="medium__articles">{blogDisplay}</div>
-          </div>
         </div>
       </div>
       <div className="home__preface">
