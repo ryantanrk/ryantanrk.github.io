@@ -23,7 +23,6 @@
 
 html {
   overflow-y: auto;
-  overflow-y: overlay;
   @include mix.scrollbar;
 }
 
@@ -31,7 +30,7 @@ body {
   padding: var(--padding-lg);
   background: var(--ecru);
   color: var(--light-goldenrod-yellow);
-  font-family: "Montserrat", normal;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   max-width: 1280px;
   margin: 0 auto;
 }
